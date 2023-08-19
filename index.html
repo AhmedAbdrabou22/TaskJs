@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link href="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
@@ -13,163 +15,619 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-lg shadow" style="background-color: white;">
-        <div class="container-fluid d-flex justify-content-between">
-            <a class="navbar-brand"  >E-Commerce</a>
-            <div>
-                <div class="cart" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="images/bdcb0c3f6d67999723518ef3c2ad5494.svg" alt="shopping" />
-                    <div class="circle"></div>
-                </div>
+    <!--Start of Navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <a class="text-center navbar-brand" href="">
+                <img src="images/images/logo1.jpg" class="rounded-circle w-25 bg-dark" />
+                <span class="text-center" id="brand">GOOD</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Links</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            trips
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Cairo</a></li>
+                            <li><a class="dropdown-item" href="#">Alex</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Luxor</a></li>
+                            <li><a class="dropdown-item" href="#">Aswan</a></li>
+                            <li><a class="dropdown-item" href="#">Sharam Elshikh</a></li>
+                            <li><a class="dropdown-item" href="#">ELGALALA</a></li>
+                            <li><a class="dropdown-item" href="#">More.....</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">About</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <button class="btn btn-outline-success mx-1" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal">Login</button>
             </div>
         </div>
     </nav>
+    <!--End Of Nav bar-->
 
-    <div class="container-fluid text-center mt-5">
-        <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <img src="images/download (2).jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Villa</h5>
-                        <div>
-                            <span>Price : </span>
-                            <span>60000</span>
-                        </div>
-                        <a   class="btn btn-primary">اضفها الي مشترياتك</a>
+
+    <!--Start of Caursol-->
+    <section>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/images/cairo/img1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  ">
+                        <h5>Cairo</h5>
+                        <p>Visit Us.</p>
+                        <button class="btn btn-success">Visit Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/images/aswan/img1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  ">
+                        <h5>Aswan</h5>
+                        <p>Visit Us.</p>
+                        <button class="btn btn-success">Visit Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/images/sharm/IMG-20230227-WA0036.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  ">
+                        <h5>Sharm Elshikh</h5>
+                        <p>Visit Us.</p>
+                        <button class="btn btn-success">Visit Us</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/images/galalh/IMG-20230227-WA0039.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  ">
+                        <h5>ElGalala</h5>
+                        <p>Visit Us.</p>
+                        <button class="btn btn-success">Visit Us</button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <img src="images/Group 598.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Bmw</h5>
-                        <div>
-                            <span>Price : </span>
-                            <span>50000</span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!--Start of Caursol-->
+
+    <!--Section welcome-->
+    <section class="welcome mt-5 py-4 px-4">
+        <h2>Welcome</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum velit maxime deleniti nisi minus aspernatur.</p>
+        <button class="btn btn-success">Learn More</button>
+    </section>
+    <!--Section welcome-->
+
+
+    <!--popular-->
+    <section class="popular text-center mt-5  py-2  ">
+        <h2>Popular Destnation in Egypt</h2>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Giza City
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+                        voluptas nobis, iusto recusandae dolor eaque et commodi perspiciatis, minima harum, eius facilis
+                        nulla exercitationem dolore.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Luxuor City
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+                        similique, eveniet eaque dolores asperiores alias id ab eum hic illo atque doloremque voluptatem
+                        minus veritatis?</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Sinai City
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                        accusamus iusto tempora praesentium natus mollitia esse deleniti quasi, quia, impedit, atque
+                        eaque. Iusto, laudantium a!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--popular-->
+
+
+    <!--Translation-->
+    <section class="mt-5 p-4">
+        <h2 class="text-center">Translate From Arabic to English</h2>
+        <p class="fs-4">Write and translate <strong>parse Here</strong></p>
+
+        <!-- <button class="btn btn-success btnCopy">Copy</button> -->
+        <button type="button" class="btnCopy btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="copy to cliboard">
+            Copy
+        </button>
+        <br></br>
+        <textarea class="border px-4" name="area" id="area" cols="100" rows="10" placeholder="translate"></textarea>
+    </section>
+    <!--Translation-->
+    <!--Translation-->
+    <section class="mt-5 p-4">
+        <h2 class="text-center">Translate From Arabic to French</h2>
+        <p class="fs-4">Write and translate <strong>parse Here</strong></p>
+
+        <!-- <button class="btn btn-success btnCopy">Copy</button> -->
+        <button type="button" class="btnCopy btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="copy to cliboard">
+            Copy
+        </button>
+        <br></br>
+        <textarea class="border px-4" name="area" id="area" cols="100" rows="10" placeholder="translate"></textarea>
+    </section>
+    <!--Translation-->
+    <!--Translation-->
+    <section class="mt-5 p-4">
+        <h2 class="text-center">Translate From Arabic to Germany</h2>
+        <p class="fs-4">Write and translate <strong>parse Here</strong></p>
+
+        <!-- <button class="btn btn-success btnCopy">Copy</button> -->
+        <button type="button" class="btnCopy btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top"
+            title="copy to cliboard">
+            Copy
+        </button>
+        <br></br>
+        <textarea class="border px-4" name="area" id="area" cols="100" rows="10" placeholder="translate"></textarea>
+    </section>
+    <!--Translation-->
+
+
+    <!--Phar3on-->
+    <section class="pharoas">
+
+    </section>
+    <!--Phar3on-->
+
+
+    <section class="text-center mt-5">
+        <h1>Popular destaniation in egypt</h1>
+        <div class="container">
+            <div class="row mt-5 d-flex justify-content-between">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <img src="images/images/alex/IMG-20230227-WA0035.jpg" class="card-img-top"
+                            style="height: 350px;" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Cairo</h5>
+                                <a href="#" class="btn btn-success">Know more</a>
+                            </div>
+                            <p class="card-text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Laudantium
+                                eaque aperiam, eos odit officia atque!.</p>
                         </div>
-                        <a   class="btn btn-primary">اضفها الي مشترياتك</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <img src="images/images/cairo/img3.jpg" class="card-img-top" style="height: 350px;" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Luxur</h5>
+                                <a href="#" class="btn btn-success">Know more</a>
+                            </div>
+                            <p class="card-text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                                officiis
+                                quasi quia mollitia at unde.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <img src="images/images/luxur/img5.jpg" class="card-img-top" style="height: 350px;" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Aswan</h5>
+                                <a href="#" class="btn btn-success">Know more</a>
+                            </div>
+                            <p class="card-text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                                officiis
+                                quasi quia mollitia at unde.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <img src="images/Group 601.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Villa Mrassi</h5>
-                        <div>
-                            <span>Price : </span>
-                            <span>500000</span>
+            <div class="row mt-5 d-flex justify-content-between">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <img src="images/images/alex/IMG-20230227-WA0035.jpg" class="card-img-top"
+                            style="height: 350px;" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Cairo</h5>
+                                <a href="#" class="btn btn-success">Know more</a>
+                            </div>
+                            <p class="card-text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Laudantium
+                                eaque aperiam, eos odit officia atque!.</p>
                         </div>
-                        <a   class="btn btn-primary">اضفها الي مشترياتك</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <img src="images/images/cairo/img3.jpg" class="card-img-top" style="height: 350px;" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Luxur</h5>
+                                <a href="#" class="btn btn-success">Know more</a>
+                            </div>
+                            <p class="card-text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                                officiis
+                                quasi quia mollitia at unde.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <img src="images/images/luxur/img5.jpg" class="card-img-top" style="height: 350px;" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Aswan</h5>
+                                <a href="#" class="btn btn-success">Know more</a>
+                            </div>
+                            <p class="card-text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                                officiis
+                                quasi quia mollitia at unde.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <img src="images/slider4.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Huwaie</h5>
-                        <div>
-                            <span>Price : </span>
-                            <span>5000</span>
+            <div class="row mt-5 d-flex justify-content-between">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <img src="images/images/cairo/img3.jpg" class="card-img-top" style="height: 350px;" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Luxur</h5>
+                                <a href="#" class="btn btn-success">Know more</a>
+                            </div>
+                            <p class="card-text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                                officiis
+                                quasi quia mollitia at unde.</p>
                         </div>
-                        <a   class="btn btn-primary">اضفها الي مشترياتك</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card shadow">
+                        <img src="images/images/luxur/img5.jpg" class="card-img-top" style="height: 350px;" alt="...">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="card-title">Aswan</h5>
+                                <a href="#" class="btn btn-success">Know more</a>
+                            </div>
+                            <p class="card-text mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut,
+                                officiis
+                                quasi quia mollitia at unde.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <img src="images/watches1.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Watches</h5>
-                        <div>
-                            <span>Price : </span>
-                            <span>350</span>
+    </section>
+
+
+    <!--Phar3on-->
+    <section class="mt-5 pharoas2">
+
+    </section>
+    <!--Phar3on-->
+
+
+
+    <section class="text-center mt-5">
+        <h1>Thanks For</h1>
+        <div class="container">
+            <div class="row mt-5 d-flex justify-content-between">
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+                    <div class="thankone text-light">
+                        <div class="overlay">
+                            <p>All thanks And applications</p>
+                            <p>octoper 15 , 2020</p>
+                            <div class="info">
+                                <img src="images/images/trainer-1.jpg" class="imgOne">
+                                <p class="text-light"> <span>Ahmed Abdrabou</span>
+                                    : <span>Front End</span>
+                                </p>
+                            </div>
                         </div>
-                        <a   class="btn btn-primary">اضفها الي مشترياتك</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <img src="images/Phone.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">IPhone 13 Pro Max</h5>
-                        <div>
-                            <span>Price : </span>
-                            <span>45500</span>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+                    <div class="thankone two text-light">
+                        <div class="overlay">
+                            <p>All thanks And applications</p>
+                            <p>octoper 15 , 2020</p>
+                            <div class="info">
+                                <img src="images/images/trainer-1.jpg" class="imgOne">
+                                <p class="text-light"> <span>Ahmed Abdrabou</span>
+                                    : <span>Front End</span>
+                                </p>
+                            </div>
                         </div>
-                        <a   class="btn btn-primary">اضفها الي مشترياتك</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <img src="images/1690129398_moto4.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Moto Cycle</h5>
-                        <div>
-                            <span>Price : </span>
-                            <span>8000</span>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+                    <div class="thankone three text-light">
+                        <div class="overlay">
+                            <p>All thanks And applications</p>
+                            <p>octoper 15 , 2020</p>
+                            <div class="info">
+                                <img src="images/images/trainer-1.jpg" class="imgOne">
+                                <p class="text-light"> <span>Ahmed Abdrabou</span>
+                                    : <span>Front End</span>
+                                </p>
+                            </div>
                         </div>
-                        <a   class="btn btn-primary">اضفها الي مشترياتك</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="card">
-                    <img src="images/Benz.jpeg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Marcedes Benz G class</h5>
-                        <div>
-                            <span>Price : </span>
-                            <span>1500000</span>
-                        </div>
-                        <a   class="btn btn-primary">اضفها الي مشترياتك</a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+
+    <section class="news mt-5">
+        <h1 class="text-center">Egypt News</h1>
+        <div class="container">
+            <div class="newOne d-flex shadow">
+                <div class="p-4">
+                    <h2>Podcast Title</h2>
+                    <p class="pt-4">Mon - may 25th 2020</p>
+                    <div class="line"></div>
+
+                    <p class="pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit beatae cum iure
+                        minus ipsa impedit obcaecati soluta qui, numquam recusandae ab similique voluptate corporis enim
+                        voluptatibus voluptatem fugiat quod distinctio. Tenetur id aspernatur officia, nesciunt,
+                        assumenda dolor at maiores totam necessitatibus beatae corrupti sint non.</p>
+                    <div class="pt-4">
+                        <button class="btn btn-success">Podcast</button>
+                        <button class="btn btn-success">55 min</button>
+                        <button class="btn btn-success">Play podcast</button>
+                    </div>
+                </div>
+                <div id="demo">
+                    <img src="/images/images/aswan/img1.jpg" />
+                </div>
+            </div>
+            <div class="newOne newtwo d-flex shadow" style="margin-top: 100px;">
+                <div id="demo">
+                    <img src="/images/images/aswan/img1.jpg" />
+                </div>
+                <div class="p-4">
+                    <h2>Podcast Title</h2>
+                    <p class="pt-4">Mon - may 25th 2020</p>
+                    <div class="line"></div>
+
+                    <p class="pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit beatae cum iure
+                        minus ipsa impedit obcaecati soluta qui, numquam recusandae ab similique voluptate corporis enim
+                        voluptatibus voluptatem fugiat quod distinctio. Tenetur id aspernatur officia, nesciunt,
+                        assumenda dolor at maiores totam necessitatibus beatae corrupti sint non.</p>
+                    <div class="pt-4">
+                        <button class="btn btn-success">Podcast</button>
+                        <button class="btn btn-success">55 min</button>
+                        <button class="btn btn-success">Play podcast</button>
+                    </div>
+                </div>
+            </div>
+            <div class="newOne d-flex shadow" style="margin-top: 100px;">
+                <div class="p-4">
+                    <h2>Podcast Title</h2>
+                    <p class="pt-4">Mon - may 25th 2020</p>
+                    <div class="line"></div>
+
+                    <p class="pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit beatae cum iure
+                        minus ipsa impedit obcaecati soluta qui, numquam recusandae ab similique voluptate corporis enim
+                        voluptatibus voluptatem fugiat quod distinctio. Tenetur id aspernatur officia, nesciunt,
+                        assumenda dolor at maiores totam necessitatibus beatae corrupti sint non.</p>
+                    <div class="pt-4">
+                        <button class="btn btn-success">Podcast</button>
+                        <button class="btn btn-success">55 min</button>
+                        <button class="btn btn-success">Play podcast</button>
+                    </div>
+                </div>
+                <div id="demo">
+                    <img src="/images/images/aswan/img1.jpg" />
+                </div>
+            </div>
+            <div class="newOne newtwo d-flex shadow" style="margin-top: 100px;">
+                <div id="demo">
+                    <img src="/images/images/aswan/img1.jpg" />
+                </div>
+                <div class="p-4">
+                    <h2>Podcast Title</h2>
+                    <p class="pt-4">Mon - may 25th 2020</p>
+                    <div class="line"></div>
+
+                    <p class="pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit beatae cum iure
+                        minus ipsa impedit obcaecati soluta qui, numquam recusandae ab similique voluptate corporis enim
+                        voluptatibus voluptatem fugiat quod distinctio. Tenetur id aspernatur officia, nesciunt,
+                        assumenda dolor at maiores totam necessitatibus beatae corrupti sint non.</p>
+                    <div class="pt-4">
+                        <button class="btn btn-success">Podcast</button>
+                        <button class="btn btn-success">55 min</button>
+                        <button class="btn btn-success">Play podcast</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="join mt-5">
+        <h2 class="text-center">Join Us</h2>
+        <div class="container">
+            <div class="joinUs row">
+                <div class="col-lg-3 col-sm-12 col-md-6">
+                    <div class="shadow text-center py-2">
+                        <p class="fs-2">Subscribe Now</p>
+                        <img src="images/images/twetter.jpg" class="shadow" />
+                        <p class="mt-2 fs-4"><a href="#">Go To Link</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-6">
+                    <div class="shadow text-center py-2">
+                        <p class="fs-2">Subscribe Now</p>
+                        <img src="images/images/whats.jpg" class="shadow" />
+                        <p class="mt-2 fs-4"><a href="#">Go To Link</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-6">
+                    <div class="shadow text-center py-2">
+                        <p class="fs-2">Subscribe Now</p>
+                        <img src="images/images/tectok.jpg" class="shadow" />
+                        <p class="mt-2 fs-4"><a href="#">Go To Link</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12 col-md-6">
+                    <div class="shadow text-center py-2">
+                        <p class="fs-2">Subscribe Now</p>
+                        <img src="images/images/youtube.jpg" class="shadow" />
+                        <p class="mt-2 fs-4"><a href="#">Go To Link</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="footer mt-5 py-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4 col-sm-12">
+                    <img src="images/images/logo1.jpg" class="rounded-circle data" />
+                    <span class="text-center" id="brand">GOOD Company</span>
+                    <hr id="horz">
+                    <div>
+                        <p>Tel : 01125178289</p>
+                        <p>Address : Mansoura</p>
+                        <p>Fax : 000 000 000</p>
+                    </div>
+                </div>
+                    <hr id="no">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="images/images/logo1.jpg" class="rounded-circle data" />
+                    <span class="text-center" id="brand">Important Links</span>
+                    <hr id="horz">
+                    <div>
+                        <p>visit Us</p>
+                        <p>Take a Look</p>
+                        <p>Your Health is Important</p>
+                    </div>
+                </div>
+                        <hr id="no">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <img src="images/images/logo1.jpg" class="rounded-circle data" />
+                    <span class="text-center" id="brand">Visison</span>
+                    <hr id="horz">
+                    <div>
+                        <p>Service Ai</p>
+                        <p>Provided Services</p>
+                        <p>We Start Before</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h2 class="text-center">CopyRight &#174; Front End Developer Ahmed Abdrabou </h2>
+        </div>
+    </section>
+
+    <div class="fixedAllBody">
+        <div class="social text-success"><i class="fa-brands fa-facebook fs-2"></i></div>
+        <div class="social text-success"><i class="fa-brands fa-whatsapp fs-2"></i></div>
+        <div class="social text-success"><i class="fa-brands fa-instagram fs-2"></i></div>
+        <div class="social text-success"><i class="fa-brands fa-twitter fs-2"></i></div>
     </div>
-
-
-
-
-    <!-- Button trigger modal -->
-
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">قائمة المشتريات</h5>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
-                </div>
-
-                <div class="modal-footer">
-                    <button class="button bg-primary">Show Total Price</button>
-                    <div class="totalPrice">
-
+                    <div class="login-container">
+                        <form class="login-form">
+                            <label>Email Address : </label>
+                            <input type="text" placeholder="Username" required>
+                            <small>We will never share your email with any one</small>
+                            <br>
+                            <div class="mt-3">
+                                <label>Password</label>
+                                <input type="password" placeholder="Password" required>
+                            </div>
+                            <div class="form-check form-switch mt-2">
+                                <input class="form-check-input" type="checkbox" role="switch"
+                                    id="flexSwitchCheckChecked" checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Remember me</label>
+                            </div>
+                        </form>
                     </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-success">Login</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Modal -->
 
 
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.xyz/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="bootstrap.bundle.js"></script> -->
+    <!-- <script src="bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script> -->
 </body>
 
 </html>
